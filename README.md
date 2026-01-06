@@ -1,20 +1,59 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Claude Code Skill Generator
 
-# Run and deploy your AI Studio app
+Claude Code için SKILL.md dosyaları oluşturan web uygulaması.
 
-This contains everything you need to run your app locally.
+## Ne İşe Yarıyor?
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+Claude Code'a özel yetenekler (skill) eklemek için gereken SKILL.md dosyalarını otomatik oluşturur. Form doldur, Gemini API ile profesyonel bir skill dosyası al.
 
-## Run Locally
+## Özellikler
 
-**Prerequisites:**  Node.js
+- Türkçe / İngilizce arayüz
+- 6 hazır skill şablonu (PDF Editor, Data Analyzer, Git Workflow, vb.)
+- Gemini API ile otomatik SKILL.md oluşturma
+- Kopyala / İndir butonları
 
+## Kurulum
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+# Bağımlılıkları yükle
+npm install
+
+# .env.local dosyasına API key ekle
+API_KEY=senin_gemini_api_keyin
+
+# Çalıştır
+npm run dev
+```
+
+Tarayıcıda `http://localhost:3000` adresine git.
+
+## Gemini API Key Alma
+
+1. https://aistudio.google.com/apikey adresine git
+2. "Create API Key" tıkla
+3. Key'i `.env.local` dosyasına yapıştır
+
+## Teknolojiler
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Gemini API
+
+## Skill Nedir?
+
+Claude Code'da skill'ler, Claude'un belirli görevlerde uzmanlaşmasını sağlayan modüler paketlerdir. Her skill bir SKILL.md dosyası içerir:
+
+```
+skill-name/
+├── SKILL.md          # Ana talimat dosyası
+├── scripts/          # Python/Bash scriptleri
+├── references/       # Referans dökümanlar
+└── assets/           # Şablonlar, görseller
+```
+
+## Lisans
+
+MIT
